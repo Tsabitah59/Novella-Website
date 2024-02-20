@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novella || Where every click opens a new world</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../public/output.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" rel="stylesheet">
+
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../Assets/Icons/Favicon.svg" type="image/x-icon">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+  </head>
+  <body>
+  <!-- Header & Navbar -->
+  <header class="bg-white fixed w-full z-50 transition-all duration-700">
+    <nav class="border-white w-full flex mx-auto justify-around">
+      <!-- Logo Dropdown -->
+      <div class="max-w-screen-xl flex  items-center p-4">
+        <!-- Logo -->
+        <img src="../Assets/Icons/Logo.svg" alt="">
+
+        <!-- Dropdown -->
+        <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg focus:outline-none dark:text-gray-400" aria-controls="navbar-hamburger" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <i class="ri-arrow-down-s-line text-[23px]"></i>
+        </button>
+        <div class="hidden w-[200px] absolute top-[82px] bg-white p-4 rounded-[5px] transition-all shadow-custom1" id="navbar-hamburger">
+          <ul class="flex flex-col">
+            <li>
+              <a href="#" class="block py-2 px-3">HOME</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3">ABOUT</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3">CAREER</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3">EVENTS</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3">SUPPORT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Search CTA Button -->
+      <div class="flex items-center justify-end">
+        <!-- Search -->
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between md:p-4">
+          
+          <!-- Desktop -->
+          <div class="flex md:order-2">
+            <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 focus:outline-none p-2.5 me-1">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+
+            <div class="relative hidden md:block">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input type="text" id="search-navbar" class="block w-full rounded-full p-2 ps-10 text-greyyy" placeholder="Search...">
+            </div>
+          </div>
+      
+          <!-- Mobile -->
+            <div class="items-center justify-between hidden md:flex md:w-auto md:order-1 absolute top-[82px] left-1/2 -translate-x-1/2 px-3 w-[90%] bg-white rounded-full shadow-custom2 md:bg-transparent md:shadow-none py-3 z-40" id="navbar-search">
+              <div class="relative md:hidden">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+                </div>
+                <input type="text" id="search-navbar" class="block w-full md:w-[100px] md:hover:w-full p-2 ps-10 rounded-full text-greyyy dark:placeholder-gray-400 placeholder:italic" placeholder="Search...">
+              </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="../src/login.html" class="btn-accent-one rounded-[10px] px-5 py-2 text-center uppercase font-semibold">Sign In</a>
+      </div>
+    </nav>
+  </header>
+ 
+  <!-- Hero -->
+  <section class="section">
+    <div class="container mx-auto">
+      <div class="flex flex-col max-w-[664px] justify-center items-center gap-[30px] text-center mx-auto">
+        <h1 class="h1 capitalize text-title">Where every click opens a new world</h1>
+
+        <div class="w-[80%] h-1 bg-accent-two rounded-full"></div>
+
+        <p>Novella is an innovative e-book platform with a vast library of captivating stories, offering a seamless and engaging reading experience for every genre enthusiast.</p>
+
+        <a href="../src/register-pt-1.html">
+          <button class="btn btn-lg btn-accent-one">Get Started</button>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan -->
+  <section class="bg-accent-three">
+    <div class="container mx-auto">
+      <div class="pt-[121.08px] pb-[85.92px] flex flex-wrap gap-[40px] justify-center">
+        <!-- Items -->
+        <div class="GakTauYangPentingKotak2__UwU max-w-[230px] h-[230px] bg-white px-[30px] py-[47.5px] border-2 border-accent-one rounded-[20px] relative shadow-custom2">
+          <!-- Overlay angka -->
+          <div class=" w-[70px] h-[70px] bg-accent-one rounded-full px-[26px] py-[5px] absolute z-[3] -top-[35.17px] left-1/2 -translate-x-1/2">
+            <span class="font-title text-[40px] text-white font-semibold text-center">1</span>
+          </div>
+
+        <!-- Desc -->
+        <div class="flex items-center">
+          <p>Wide and diverse collection of books from various genres and renowned authors.</p>
+        </div>
+        </div>
+
+        <!-- Items -->
+        <div class="GakTauYangPentingKotak2__UwU max-w-[230px] h-[230px] bg-white px-[30px] py-[47.5px] border-2 border-accent-one rounded-[20px] relative shadow-custom2">
+          <!-- Overlay angka -->
+          <div class=" w-[70px] h-[70px] bg-accent-one rounded-full px-[23px] py-[5px] absolute z-[3] -top-[35.17px] left-1/2 -translate-x-1/2">
+            <span class="font-title text-[40px] text-white font-semibold text-center">2</span>
+          </div>
+
+        <!-- Desc -->
+        <div class="flex items-center">
+          <p>User-friendly interface that enhances the reading experience.</p>
+        </div>
+        </div>
+
+        <!-- Items -->
+        <div class="GakTauYangPentingKotak2__UwU max-w-[230px] h-[230px] bg-white px-[30px] py-[47.5px] border-2 border-accent-one rounded-[20px] relative shadow-custom2">
+          <!-- Overlay angka -->
+          <div class=" w-[70px] h-[70px] bg-accent-one rounded-full px-[23.5px] py-[5px] absolute z-[3] -top-[35.17px] left-1/2 -translate-x-1/2">
+            <span class="font-title text-[40px] text-white font-semibold text-center">3</span>
+          </div>
+
+        <!-- Desc -->
+        <div class="flex items-center">
+          <p>Offline reading feature for convenient access to books anytime, anywhere.</p>
+        </div>
+        </div>
+
+        <!-- Items -->
+        <div class="GakTauYangPentingKotak2__UwU max-w-[230px] h-[230px] bg-white px-[30px] py-[47.5px] border-2 border-accent-one rounded-[20px] relative shadow-custom2">
+          <!-- Overlay angka -->
+          <div class=" w-[70px] h-[70px] bg-accent-one rounded-full px-[24px] py-[5px] absolute z-[3] -top-[35.17px] left-1/2 -translate-x-1/2">
+            <span class="font-title text-[40px] text-white font-semibold text-center">4</span>
+          </div>
+
+        <!-- Desc -->
+        <div class="flex items-center">
+          <p>Responsive customer service to address technical issues or reader inquiries.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneftit Eakk -->
+  <section class="benefit">
+        <!-- Like -->
+        <section class="benefit__publish py-[70px]">
+          <div class="container mx-auto flex flex-col-reverse gap-[20px] xl:gap-[40px] justify-center xl:flex-row-reverse xl:justify-between items-center">
+            <!-- Judul -->
+            <div class="flex flex-col gap-[30px] text-center xl:text-left xl:max-w-[494px]">
+              <h2 class="h2 text-title xl:text-left">+10 Millions collection</h2>
+              <p class="xl:text-left">Novella provides access to over 10 million collections of e-books, magazines, and other publications. The collection includes various genres, from fiction, non-fiction, business, science, technology, to health and fitness. With advanced search features and recommendations based on reader interests, users can find and enjoy their favorite e-books anytime, anywhere.</p>
+            </div>
+      
+            <!-- Lottie -->
+            <div class="max-w-[500px]">
+              <dotlottie-player src="https://lottie.host/ed371a79-8ade-4f9d-bd64-4841e234f0c6/5504iKQTkO.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+            </div>
+          </div>
+        </section>
+
+      <!-- Community -->
+    <section class="benefit__community py-[70px]">
+      <div class="container mx-auto flex flex-col-reverse gap-[40px] justify-center xl:flex-row xl:justify-between items-center">
+        <!-- Judul -->
+        <div class="flex flex-col gap-[30px] text-center xl:text-left xl:max-w-[494px]">
+          <h2 class="h2 text-title xl:text-left">Connected With Community</h2>
+          <p class="xl:text-left">Users of Novella can connect with the community within Novella through discussion forums, reader groups, comments, reviews, and organized events. They can interact with fellow readers and writers, share opinions, book recommendations, and participate in events to expand their network with like-minded individuals.</p>
+        </div>
+  
+        <!-- Lottie -->
+        <div class="max-w-[500px]">
+          <dotlottie-player src="https://lottie.host/78a3fded-e8b4-42b9-9eaa-d7f3365d0a9e/zJb5Te389Q.json" background="transparent" speed="1"direction="1" playMode="normal" loop autoplay></dotlottie-player>      
+        </div>
+      </div>
+    </section>
+
+    <!-- Publish -->
+    <section class="benefit__publish py-[70px]">
+      <div class="container mx-auto flex flex-col-reverse gap-[20px] xl:gap-[40px] justify-center xl:flex-row-reverse xl:justify-between items-center">
+        <!-- Judul -->
+        <div class="flex flex-col gap-[30px] text-center xl:text-left xl:max-w-[494px]">
+          <h2 class="h2 text-title xl:text-left">You Can publish your work!</h2>
+          <p class="xl:text-left">Once his work has received a lot of interest, you can contact Novella to express your interest in publishing his work in print media. Novella will prepare the process for publishing your work in print media, including the editing process, layout design, printing, and distribution of the work to bookstores and readers.</p>
+        </div>
+  
+        <!-- Lottie -->
+        <div class="max-w-[500px]">
+          <dotlottie-player src="https://lottie.host/86486866-686d-4ff5-b2cc-e6ce3d9a981a/qkWd0sXWYN.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Book -->
+  <section class="bg-accent-three section">
+    <div class="container mx-auto">
+      <!-- Title -->
+      <div class="titlenya__awogg text-center lg:text-left mb-9">
+        <h2 class="h2 text-white">Trending In <span id="tahunn" class="bg-accent-one px-[20px] rounded-2xl"></span></h2>
+      </div>
+
+      <!-- Buku -->
+      <div class="overflow-x-scroll py-8 lg:w-[80%] mx-auto flex gap-[100px] snap-mandatory snap-x">
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+        
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+
+        <!-- Book Item -->
+        <a href="../src/detail1.html" class="snap-center">
+          <div class="pb-[8px] overflow-hidden relative w-[242px] group">
+            <img src="../Assets/Image/Buku-1.png" alt="" class="w-[242px] h-[378.125px] rounded-[20px]">
+  
+            <!-- Overlay -->
+            <div class="">
+              <!-- Rate -->
+              <span class="z-20 bg-accent-one text-white p-2 rounded-full font-semibold shadow-custom2 absolute top-3 right-3 -translate-y-[100px] group-hover:translate-y-0  transition-all duration-700">13+</span>
+  
+              <!-- Judul -->
+              <div class="bg-white text-center py-2 px-4 absolute bottom-[96px] left-1/2 -translate-x-1/2 shadow-custom2 rounded-lg z-20 translate-y-[200px] group-hover:translate-y-0 transition-all duration-700">
+                <h4 class="h4 text-title">Butterfly</h4>
+              </div>
+              
+              <!-- Lainnya -->
+              <div class="bg-white flex flex-col gap-2 absolute justify-center bottom-0 shadow-custom2 px-3 py-3 rounded-lg left-1/2 -translate-x-1/2 w-[143px] translate-y-[200px] group-hover:translate-y-0 transition-all duration-700 delay-75">
+                <span class="text-sm text-center group-hover:translate-y-0 transition-all duration-700">Written by <br><b>Jane Smith</b></span>
+  
+                <!-- Genre -->
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Fantasy</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="relative bg-white section overflow-x-hidden text-center">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-y-[70px] lg:gap-y-0 justify-center lg:justify-evenly">
+      <div class="testi__title lg:max-w-[500px]">
+        <h1 class="h1 text-title">What they said?</h1>
+        <br>
+        <p>These are reviews from those who are satisfied with Novella. They recommend Novella for users of all ages.</p>
+      </div>
+
+      <!-- Isinya -->
+      <div class="">
+        <div class="testi__kotak relative bg-white px-[13.5px] py-[12.5px] rounded-[33px] max-w-[423px] group hover:rotate-[4.495deg] hover:scale-[1.03] hover:shadow-custom2 transition-all duration-100">
+          <div class="testi__overlay border-2 border-title h-[108%] absolute w-[105%] rounded-[41px] -top-[9px] -left-[9px] group-hover:-rotate-[8.514deg] transition-all duration-100">
+          </div>
+
+        <div class="testi__isi text-center flex flex-col gap-[11px] px-[13.5px] py-[12.5px] overflow-hidden">
+          <div class="judul__atas">
+            <h4 class="h4 text-title">Ethan</h4>
+            <span class="font-semibold text-[16px]">@EthanBrowny21</span>
+          </div>
+          <p>Novella is an easy-to-use web e-book platform that provides an enjoyable reading experience. I recommend it!</p>
+
+          <div class="stars__rate text-yellow-400 text-xl flex justify-center">
+            <div class="translate-y-96 group-hover:translate-y-0 transition-all duration-700">
+              <i class="ri-star-s-fill"></i>
+            </div>
+            <div class="translate-y-96 group-hover:translate-y-0 transition-all duration-700 delay-100">
+              <i class="ri-star-s-fill"></i>
+            </div>
+            <div class="translate-y-96 group-hover:translate-y-0 transition-all duration-700 delay-200">
+              <i class="ri-star-s-fill"></i>
+            </div>
+            <div class="translate-y-96 group-hover:translate-y-0 transition-all duration-700 delay-300">
+              <i class="ri-star-s-fill"></i>
+            </div>
+            <div class="translate-y-96 group-hover:translate-y-0 transition-all duration-700 delay-[400ms]">
+              <i class="ri-star-s-fill"></i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-accent-three py-12 text-white flex justify-center">
+    <div class="container mx-auto">
+      <div class="flex flex-col lg:flex-row lg:justify-around gap-[30px]">
+        <div class="footer__kiri">
+          <div class="">
+            <img src="../Assets/Icons/Logo-Putih.svg" alt="">
+            <p class="text-white">Where every click opens a new world</p>
+          </div>
+        </div>
+    
+        <div class="footer__kanan flex flex-col gap-[30px] lg:w-1/3">
+          <div class="flex flex-col gap-[10px]">
+            <h4 class="h4">Subscribe Our Newsletter</h4>
+            <form class="flex-1">
+              <div class="flex flex-col md:flex-row relative gap-y-[5px]">
+                <input type="email" placeholder="Your email address" class="rounded-full w-full h-[50px] bg-transparent border-2 border-white focus:border-white pl-[30px] placeholder:text-white focus:text-white">
+                <button class="btn btn-default btn-white rounded-full md:absolute right-0">Subscribe</button>
+              </div>
+            </form>
+          </div>
+    
+          <div class="flex flex-col gap-[10px]">
+            <h4 class="h4">Follow Us</h4>
+
+            <div class="sosmed flex gap-[20px] text-[30px]">
+              <i class="ri-twitter-x-fill"></i>
+              <i class="ri-global-line"></i>
+              <i class="ri-facebook-circle-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-youtube-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+
+      <div class="text-center py-5">
+        
+        &copy; 2024 Novella || All Rights Reserved
+      </div>
+    </div>
+  </footer>
+ 
+
+  <!-- Flowbite -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  <!-- Javascript UwU -->
+  <script src="../src/main.js"></script>
+
+  <!-- LottieFiles -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+  <!-- Swiper -->
+ 
+
+  </body>
+</html>

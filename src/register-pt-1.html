@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In || Novella</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../public/output.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css" rel="stylesheet">
+
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../Assets/Icons/Favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <section class="h-screen bg-accent-three relative overflow-hidden">
+        <div class="relative h-screen overflow-y-auto">
+            <!-- Back -->
+            <a href="../src/index.html" class="bg-accent-one text-white text-xl px-4 py-3 text-center absolute z-[20] rounded-full font-semibold top-3 left-3"><i class="ri-arrow-left-s-line"></i> Back</a>
+            
+            <div class="bg-white w-full md:max-w-[600px] absolute z-10 -bottom-96 rounded-b-none rounded-t-[20px] md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 shadow-custom1 py-[45px] px-[35px] md:max-h-[650px] md:p-[70px] md:rounded-[20px] flex flex-col gap-[30px]">
+                <h4 class="h2 text-title text-center">Sign Up</h4>
+
+                <!-- Form Sign Up -->
+                <form class="">
+                    <!-- First Name -->
+                    <label for="input-group-one" class="block mb-2 text-sm font-medium">Your First Name</label>
+                    <div class="relative mb-6">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                            <i class="ri-user-3-fill"></i>
+                        </div>
+                        <input type="text" id="input-group-one" class="block w-full ps-10 border-transparent focus:border-none border-b-accent-one p-2.5 placeholder-gray-400" placeholder="Aurora">
+                    </div>
+
+                    <!-- Last Name -->
+                    <label for="input-group-one" class="block mb-2 text-sm font-medium">Your Last Name</label>
+                    <div class=" mb-6">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                <i class="ri-user-3-fill"></i>
+                            </div>
+                            <input type="text" id="input-group-one" class="block w-full ps-10 border-transparent focus:border-none border-b-accent-one p-2.5 placeholder-gray-400" placeholder="Nightshade">
+                        </div>
+                    </div>
+
+                    <!-- User Name -->
+                    <label for="input-group-one" class="block mb-2 text-sm font-medium">Your Username</label>
+                    <div class=" mb-6">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                <i class="ri-at-line"></i>
+                            </div>
+                            <input type="text" id="input-group-one" class="block w-full ps-10 border-transparent focus:border-none border-b-accent-one p-2.5 placeholder-gray-400" placeholder="nightshadeaurora">
+                        </div>
+                    </div>
+
+                    <a href="../src/register-pt-2.html" class="text-center btn btn-default btn-accent-one mx-auto w-full">
+                        Next
+                    </a>
+                </form>
+
+                <span class="text-sm text-center">Already have account? <a href="../src/login.html" class="underline text-accent-three ">Sign In</a></span>
+            </div>
+
+        </div>
+        <div class="hidden md:block bg-white h-[1700px] w-[1200px] absolute -rotate-[81deg] -bottom-[100px] md:-right-[500px] lg:-right-[450px] md:-top-[100px] md:rotate-[29.426deg]"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply text-greyyy font-main text-[17px];
+}
+
+
+.h1{
+    @apply font-semibold text-[50px] md:text-[64px] font-title leading-[70px] capitalize;
+}
+
+.h2{
+    @apply font-semibold text-[46px] md:text-[60px] font-title leading-[70px] capitalize;
+}
+
+.h4{
+    @apply text-[32px] font-title font-medium tracking-[1.6px] leading-[40px] capitalize
+}
+
+.h6{
+    @apply text-[24px] font-title font-medium capitalize leading-none;
+}
+
+.btn{
+    @apply  rounded-[20px] uppercase font-semibold tracking-[3.57px] flex items-center justify-center transition-all;
+}
+
+.btn-default{
+    @apply px-[28px] py-[12px] rounded-[10px];
+}
+
+.btn-lg{
+    @apply px-[49px] py-[19px];
+}
+
+.btn-accent-one{
+    @apply bg-accent-one text-white;
+}
+
+.btn-white{
+    @apply bg-white text-greyyy
+}
+
+.section{
+    @apply py-[150px];
+}
+
+/* FAQ */
+.faq__item.open .faq__answer{
+    @apply h-full;
+}

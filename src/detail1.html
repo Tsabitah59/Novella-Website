@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Butterfly || Novella</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../public/output.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../Assets/Icons/Favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+  <!-- Header & Navbar -->
+    <header class="bg-white fixed w-full z-50 transition-all duration-700 shadow-custom1">
+      <nav class="border-white w-full flex mx-auto justify-around">
+        <!-- Logo Dropdown -->
+        <div class="max-w-screen-xl flex  items-center p-4">
+          <!-- Logo -->
+          <a href="../src/index.html">
+            <img src="../Assets/Icons/Logo.svg" alt="">
+          </a>
+
+          <!-- Dropdown -->
+          <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg focus:outline-none dark:text-gray-400" aria-controls="navbar-hamburger" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <i class="ri-arrow-down-s-line text-[23px]"></i>
+          </button>
+          <div class="hidden w-[200px] absolute top-[82px] bg-white p-4 rounded-[5px] transition-all shadow-custom1" id="navbar-hamburger">
+            <ul class="flex flex-col">
+              <li>
+                <a href="#" class="block py-2 px-3">HOME</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3">ABOUT</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3">CAREER</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3">EVENTS</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3">SUPPORT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Search CTA Button -->
+        <div class="flex items-center justify-end">
+          <!-- Search -->
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between md:p-4">
+            
+            <!-- Desktop -->
+            <div class="flex md:order-2">
+              <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 focus:outline-none p-2.5 me-1">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+
+              <div class="relative hidden md:block">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+                  <span class="sr-only">Search icon</span>
+                </div>
+                <input type="text" id="search-navbar" class="block w-full rounded-full p-2 ps-10 text-greyyy" placeholder="Search...">
+              </div>
+            </div>
+        
+            <!-- Mobile -->
+              <div class="items-center justify-between hidden md:flex md:w-auto md:order-1 absolute top-[82px] left-1/2 -translate-x-1/2 px-3 w-[90%] bg-white rounded-full shadow-custom2 md:bg-transparent md:shadow-none py-3 z-40" id="navbar-search">
+                <div class="relative md:hidden">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                  </div>
+                  <input type="text" id="search-navbar" class="block w-full md:w-[100px] md:hover:w-full p-2 ps-10 rounded-full text-greyyy dark:placeholder-gray-400 placeholder:italic" placeholder="Search...">
+                </div>
+              </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="../src/login.html" class="btn-accent-one rounded-[10px] px-5 py-2 text-center uppercase font-semibold">Sign In</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class=" flex flex-col lg:flex-row gap-[30px]">
+      <section class="p-3 lg:px-[138px]">
+        <div class="bg-white shadow-custom1 relative p-12 top-[400px] rounded-[20px] max-w-[1010px]">
+          <div class="">
+            <!-- Judul Utama -->
+            <div class="flex flex-col lg:flex-row justify-center lg:justify-around gap-[30px] lg:gap-[100px]  absolute left-1/2 -translate-x-1/2 -top-[200px]">
+              <img
+                src="../Assets/Image/Buku-1.png"
+                alt=""
+                class="w-[200px] border-accent-one border-2 rounded-[20px]"
+              />
+  
+              <!-- Judul -->
+              <div class="text-center lg:text-left lg:mt-[60px]">
+                <h2 class="h2 text-title">Butterfly</h2>
+                <span class="font-semibold uppercase tracking-wider">Jane Smith</span>
+              </div>
+            </div>
+
+            <div class="bagian__bawah text-justify mt-[160px]">
+          
+              <!-- Sinopsis -->
+              <p class="mb-9">
+                Tells the story of a teenage girl named Mia, who accidentally discovers a parallel world full of magical creatures. In that world, Mia meets a handsome fairy prince named Aiden, who has beautiful butterfly wings.
+
+                <br><br>
+
+                As Mia and Aiden grow closer, they must face various obstacles and conflicts that threaten their relationship. Mia also finds out that she has extraordinary magical powers, which turn out to be related to her destiny in protecting the fantasy world they encounter.
+
+                <br><br>
+                
+                In this epic journey, Mia and Aiden must unite and face powerful enemies, while keeping their love shining amidst the storm. "Butterfly" is a story filled with adventure, magic, and of course, eternal love.
+              </p>
+
+                
+                <!-- Genre -->
+                <div class="flex gap-3 overflow-x-hidden mb-9">
+                  <span class="bg-gray-50 px-5 py-2 rounded-full border w-auto">Romance</span>
+                  <span class="bg-gray-50 px-5 py-2 rounded-full border w-auto">Fantasy</span>
+                </div>
+
+                <div class="mb-9 py-5 px-8 border-2 border-accent-one rounded-[20px] flex gap-4 items-center">
+                  <i class="ri-copyright-fill text-[30px] text-accent-three"></i>
+                  <span class="text-left text-[20px] font-semibold">All Rights Reserved</span>
+                </div>
+
+              <!-- Chapters -->
+              <div class="faq__item cursor-pointer select-none">
+                <!-- Title & Icon -->
+                <div class="flex items-center justify-between mb-[10px]">
+                    <!-- Title -->
+                    <h4 class="h4 text-title">Chapters</h4>
+
+                    <!-- Icon -->
+                    <div class="faq__btn text-accent">
+                      <i class="ri-arrow-down-s-line text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Answer Text -->
+                <div class="faq__answer h-0 overflow-hidden">
+                  <div class="detail__chapter px-10 py-3 text-left border-2 border-accent-two rounded-[10px]">
+                    <ol class="list-decimal">
+                      <li class="py-3 border-b-[1px]">Mia's Discovery</li>
+                      <li class="py-3 border-b-[1px]">The Portal to Another World</li>
+                      <li class="py-3 border-b-[1px]">A Fateful Encounter</li>
+                      <li class="py-3 border-b-[1px]">Wings of Enchantment</li>
+                      <li class="py-3 border-b-[1px]">A Growing Connection</li>
+                      <li class="py-3 border-b-[1px]">Trials and Tribulations</li>
+                      <li class="py-3 border-b-[1px]">Love in Peril</li>
+                      <li class="py-3 border-b-[1px]">Unleashing Magic</li>
+                      <li class="py-3 border-b-[1px]">The Prophecy Unraveled</li>
+                      <li class="py-3 border-b-[1px]">Embracing Destiny</li>
+                      <li class="py-3 border-b-[1px]">Shadows of Opposition</li>
+                      <li class="py-3 border-b-[1px]">Unity in Adversity</li>
+                      <li class="py-3 border-b-[1px]">Confronting the Unknown</li>
+                      <li class="py-3 border-b-[1px]">Love's Resilience</li>
+                      <li class="py-3 border-b-[1px]">Setting Out on the Quest</li>
+                      <li class="py-3 border-b-[1px]">Secrets of the Past</li>
+                      <li class="py-3 border-b-[1px]">Testing Bonds</li>
+                      <li class="py-3 border-b-[1px]">Aiding Each Other</li>
+                      <li class="py-3 border-b-[1px]">The Power Within Mia</li>
+                      <li class="py-3 border-b-[1px]">Facing Inner Demons</li>
+                      <li class="py-3 border-b-[1px]">Darkness Descends</li>
+                      <li class="py-3 border-b-[1px]">A Glimmer of Hope</li>
+                      <li class="py-3 border-b-[1px]">Seeking the Truth</li>
+                      <li class="py-3 border-b-[1px]">Hearts Intertwined</li>
+                      <li class="py-3 border-b-[1px]">Wings of Protection</li>
+                      <li class="py-3 border-b-[1px]">Illuminating Love</li>
+                      <li class="py-3 border-b-[1px]">The Battle Approaches</li>
+                      <li class="py-3 border-b-[1px]">Courageous Hearts</li>
+                      <li class="py-3 border-b-[1px]">Standing Strong</li>
+                      <li class="py-3"> The Final Confrontation</li>
+                    </ol>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rekomendasi -->
+      <aside class="relative top-[400px] p-4">
+        <div class="">
+          <h4 class="h4 text-title text-center lg:text-left">Other Books</h4>
+
+          <!-- Buku2 -->
+          <div class="overflow-y-scroll h-[500px] py-5 flex flex-col gap-5">
+
+            <!-- Item Buku -->
+            <div class="buku__lain flex gap-5 items-center">
+              <img src="../Assets/Image/Buku-Lain/rekomendasi-buku (5).png" alt="" class="w-[100px] rounded">
+
+              <!-- judul Buku -->
+              <div class="">
+                <div class="mb-2">
+                  <h6 class="h6 text-title flex items-center gap-3">Memories <span class="text-[17px] bg-accent-one px-1 py-2 rounded-full text-white">13+</span></h6>
+                  <span class="text-sm font-semibold">Avery Davis</span>
+                </div>
+
+                <p class="text-xs mb-4">Sarah, a 13 year old teenager who has to face various ... <span class="underline font-semibold text-accent-three italic">More</span> </p>
+
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Family</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Angst</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto flex gap-[3px]">Slice of <span>life</span> </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Buku -->
+            <div class="buku__lain flex gap-5 items-center">
+              <img src="../Assets/Image/Buku-Lain/rekomendasi-buku (5).png" alt="" class="w-[100px] rounded">
+
+              <!-- judul Buku -->
+              <div class="">
+                <div class="mb-2">
+                  <h6 class="h6 text-title flex items-center gap-3">Memories <span class="text-[17px] bg-accent-one px-1 py-2 rounded-full text-white">13+</span></h6>
+                  <span class="text-sm font-semibold">Avery Davis</span>
+                </div>
+
+                <p class="text-xs mb-4">Sarah, a 13 year old teenager who has to face various ... <span class="underline font-semibold text-accent-three italic">More</span> </p>
+
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Family</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Angst</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto flex gap-[3px]">Slice of <span>life</span> </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Buku -->
+            <div class="buku__lain flex gap-5 items-center">
+              <img src="../Assets/Image/Buku-Lain/rekomendasi-buku (5).png" alt="" class="w-[100px] rounded">
+
+              <!-- judul Buku -->
+              <div class="">
+                <div class="mb-2">
+                  <h6 class="h6 text-title flex items-center gap-3">Memories <span class="text-[17px] bg-accent-one px-1 py-2 rounded-full text-white">13+</span></h6>
+                  <span class="text-sm font-semibold">Avery Davis</span>
+                </div>
+
+                <p class="text-xs mb-4">Sarah, a 13 year old teenager who has to face various ... <span class="underline font-semibold text-accent-three italic">More</span> </p>
+
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Family</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Angst</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto flex gap-[3px]">Slice of <span>life</span> </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Buku -->
+            <div class="buku__lain flex gap-5 items-center">
+              <img src="../Assets/Image/Buku-Lain/rekomendasi-buku (5).png" alt="" class="w-[100px] rounded">
+
+              <!-- judul Buku -->
+              <div class="">
+                <div class="mb-2">
+                  <h6 class="h6 text-title flex items-center gap-3">Memories <span class="text-[17px] bg-accent-one px-1 py-2 rounded-full text-white">13+</span></h6>
+                  <span class="text-sm font-semibold">Avery Davis</span>
+                </div>
+
+                <p class="text-xs mb-4">Sarah, a 13 year old teenager who has to face various ... <span class="underline font-semibold text-accent-three italic">More</span> </p>
+
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Family</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Angst</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto flex gap-[3px]">Slice of <span>life</span> </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Buku -->
+            <div class="buku__lain flex gap-5 items-center">
+              <img src="../Assets/Image/Buku-Lain/rekomendasi-buku (5).png" alt="" class="w-[100px] rounded">
+
+              <!-- judul Buku -->
+              <div class="">
+                <div class="mb-2">
+                  <h6 class="h6 text-title flex items-center gap-3">Memories <span class="text-[17px] bg-accent-one px-1 py-2 rounded-full text-white">13+</span></h6>
+                  <span class="text-sm font-semibold">Avery Davis</span>
+                </div>
+
+                <p class="text-xs mb-4">Sarah, a 13 year old teenager who has to face various ... <span class="underline font-semibold text-accent-three italic">More</span> </p>
+
+                <div class="flex gap-2 overflow-x-hidden">
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Family</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto">Angst</span>
+                  <span class="bg-gray-50 px-2 rounded-full text-xs border w-auto flex gap-[3px]">Slice of <span>life</span> </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+      <!-- Footer -->
+  <footer class="bg-accent-three py-12 text-white flex justify-center relative -bottom-[500px]">
+    <div class="container mx-auto">
+      <div class="flex flex-col lg:flex-row lg:justify-around gap-[30px]">
+        <div class="footer__kiri">
+          <div class="">
+            <img src="../Assets/Icons/Logo-Putih.svg" alt="">
+            <p class="text-white">Where every click opens a new world</p>
+          </div>
+        </div>
+    
+        <div class="footer__kanan flex flex-col gap-[30px] lg:w-1/3">
+          <div class="flex flex-col gap-[10px]">
+            <h4 class="h4">Subscribe Our Newsletter</h4>
+            <form class="flex-1">
+              <div class="flex flex-col md:flex-row relative gap-y-[5px]">
+                <input type="email" placeholder="Your email address" class="rounded-full w-full h-[50px] bg-transparent border-2 border-white focus:border-white pl-[30px] placeholder:text-white focus:text-white">
+                <button class="btn btn-default btn-white rounded-full md:absolute right-0">Subscribe</button>
+              </div>
+            </form>
+          </div>
+    
+          <div class="flex flex-col gap-[10px]">
+            <h4 class="h4">Follow Us</h4>
+
+            <div class="sosmed flex gap-[20px] text-[30px]">
+              <i class="ri-twitter-x-fill"></i>
+              <i class="ri-global-line"></i>
+              <i class="ri-facebook-circle-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-youtube-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+
+      <div class="text-center py-5">
+        
+        &copy; 2024 Novella || All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- Javascript UwU -->
+    <script src="../src/apapun.js"></script>
+
+    <!-- LottieFiles -->
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>
