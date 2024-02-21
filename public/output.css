@@ -1524,6 +1524,15 @@ video {
   transition-duration: 700ms;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: Poppins;
   font-size: 17px;
