@@ -1029,12 +1029,12 @@ video {
   gap: 40px;
 }
 
-.gap-y-\[5px\] {
-  row-gap: 5px;
+.gap-\[70px\] {
+  gap: 70px;
 }
 
-.gap-y-\[70px\] {
-  row-gap: 70px;
+.gap-y-\[5px\] {
+  row-gap: 5px;
 }
 
 .overflow-hidden {
@@ -1840,10 +1840,6 @@ body {
 
   .lg\:gap-\[100px\] {
     gap: 100px;
-  }
-
-  .lg\:gap-y-0 {
-    row-gap: 0px;
   }
 
   .lg\:px-\[138px\] {
