@@ -1001,10 +1001,6 @@ video {
   gap: 1.25rem;
 }
 
-.gap-\[100px\] {
-  gap: 100px;
-}
-
 .gap-\[10px\] {
   gap: 10px;
 }
@@ -1027,6 +1023,10 @@ video {
 
 .gap-\[40px\] {
   gap: 40px;
+}
+
+.gap-\[50px\] {
+  gap: 50px;
 }
 
 .gap-\[70px\] {
